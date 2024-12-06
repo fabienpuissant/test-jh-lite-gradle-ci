@@ -1,0 +1,14 @@
+{
+  "actions" : [ {
+    "module" : "init",
+    "date" : "2024-12-06T16:31:07.987577800Z",
+    "properties" : {
+      "packageName" : "com.mycompany.myapp",
+      "projectName" : "JHipster Sample Application",
+      "baseName" : "jhipsterSampleApplication",
+      "endOfLine" : "lf",
+      "indentSize" : 2,
+      "springConfigurationFormat" : "yaml"
+    }
+  } ]
+}
