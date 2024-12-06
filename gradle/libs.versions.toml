@@ -1,35 +1,33 @@
-plugins = {}
 bundles = {}
 
 [versions]
-	assertj = "3.26.3"
-	mockito = "5.14.2"
-	junit-jupiter = "5.11.3"
+	spring-boot = "3.3.5"
 
-	[libraries.junit-params]
-		name = "junit-jupiter-params"
-		group = "org.junit.jupiter"
+	[plugins.spring-boot]
+		id = "org.springframework.boot"
 
-		[libraries.junit-params.version]
-			ref = "junit-jupiter"
+		[plugins.spring-boot.version]
+			ref = "spring-boot"
 
-	[libraries.assertj]
-		name = "assertj-core"
-		group = "org.assertj"
+	[libraries.spring-boot-starter]
+		name = "spring-boot-starter"
+		group = "org.springframework.boot"
 
-		[libraries.assertj.version]
-			ref = "assertj"
+	[libraries.spring-boot-starter-test]
+		name = "spring-boot-starter-test"
+		group = "org.springframework.boot"
 
-	[libraries.junit-engine]
-		name = "junit-jupiter-engine"
-		group = "org.junit.jupiter"
+	[libraries.spring-boot-dependencies]
+		name = "spring-boot-dependencies"
+		group = "org.springframework.boot"
 
-		[libraries.junit-engine.version]
-			ref = "junit-jupiter"
+		[libraries.spring-boot-dependencies.version]
+			ref = "spring-boot"
 
-	[libraries.mockito]
-		name = "mockito-junit-jupiter"
-		group = "org.mockito"
+	[libraries.spring-boot-configuration-processor]
+		name = "spring-boot-configuration-processor"
+		group = "org.springframework.boot"
 
-		[libraries.mockito.version]
-			ref = "mockito"
+	[libraries.commons-lang3]
+		name = "commons-lang3"
+		group = "org.apache.commons"

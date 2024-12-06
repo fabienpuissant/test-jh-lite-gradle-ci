@@ -2,6 +2,7 @@
 
 plugins {
   java
+  alias(libs.plugins.spring.boot)
   // jhipster-needle-gradle-plugins
 }
 
@@ -12,6 +13,13 @@ java {
     languageVersion = JavaLanguageVersion.of(21)
   }
 }
+
+defaultTasks("bootRun")
+
+springBoot {
+  mainClass = "com.mycompany.myapp.JhipsterSampleApplicationApp"
+}
+
 // jhipster-needle-gradle-plugins-configurations
 
 repositories {
@@ -29,13 +37,15 @@ val profiles = (project.findProperty("profiles") as String? ?: "")
 // jhipster-needle-profile-activation
 
 dependencies {
+  implementation(platform(libs.spring.boot.dependencies))
+  implementation(libs.spring.boot.starter)
+  implementation(libs.spring.boot.configuration.processor)
+  implementation(libs.commons.lang3)
   // jhipster-needle-gradle-implementation-dependencies
   // jhipster-needle-gradle-compile-dependencies
   // jhipster-needle-gradle-runtime-dependencies
-  testImplementation(libs.junit.engine)
-  testImplementation(libs.junit.params)
-  testImplementation(libs.assertj)
-  testImplementation(libs.mockito)
+  testImplementation(libs.spring.boot.starter.test)
+
   // jhipster-needle-gradle-test-dependencies
 }
 
