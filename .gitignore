@@ -128,3 +128,8 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+# Gradle
+/.gradle/
+/build/
+./buildSrc/.gradle/
+./buildSrc/build/
